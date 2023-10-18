@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>평가</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    html,
+    body,
+    #wrapper {
+        width: 100%;
+        height: 250px;
+    }
+
+    #wrapper {
+        display: grid;
+        grid-template-rows: 1fr 1fr 6fr 1fr;
+        gap: 1%;
+    }
+
+    #header1 {
+        background-color: #ffd56c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #header2 {
+        background-color: #d1b3e0;
+        /* display: flex; */
+        border-radius: 60px;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    ul#header2 li {
+        letter-spacing: 0.3em;
+    }
+
+    #category {
+        background-color: #e6b3b3;
+        list-style: none;
+        padding: 0;
+    }
+
+    #category li {
+        padding: 4% 8%;
+        border-bottom: 1px solid #d1a3a3;
+    }
+
+    #category li:nth-child(1) {
+        border-top: 1px solid #d1a3a3;
+    }
+
+    li {
+        color: white;
+        font-weight: 600;
+    }
+
+    li a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    #content {
+        display: grid;
+        /* background-color: #fafafa; */
+        grid-template-columns: 1fr 4fr 1fr;
+        gap: 1%;
+    }
+
+    .aside {
+        background-color: #faebeb;
+        border-radius: 60px 60px 0px 0px;
+        padding: 15% 8%;
+    }
+
+    #main {
+        background-color: #fafafa;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1%;
+        padding: 3%;
+        border-radius: 60px 60px 0px 0px;
+    }
+
+    .item {
+        display: grid;
+        grid-template-rows: 5fr 4fr 1fr;
+        gap: 1%;
+        border: 1px solid #e5e5e5;
+        padding: 5%;
+    }
+
+    #item1 {
+        /* background-color: aqua; */
+    }
+
+    #item2 {
+        /* background-color: #ffd65c; */
+    }
+
+    #item3 {
+        /* background-color: brown; */
+    }
+
+    #footer {
+        /* background-color: #ccccf2; */
+    }
+
+    div:not(div#content div) {
+        border-radius: 60px;
+    }
+
+    div#header1>div {
+        display: flex;
+        width: 20%;
+        align-items: center;
+    }
+
+    div#header1>div>img {
+        width: inherit;
+    }
+
+    div#header1>div>span {
+        font-size: 2em;
+        font-weight: 900;
+        color: #53188b;
+    }
+</style>
+
+<body>
+    <div id="wrapper">
+        <div id="header1">
+            <div>
+                <span>관리자 페이지</span>
+            </div>
+        </div>
+        <div id="content">
+            <div id="aside1" class="aside">
+                <h3>카테고리</h3>
+                <ul id="category">
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">상품</a></li>
+                    <li><a href="#">게시판</a></li>
+                    <li><a href="#">리뷰</a></li>
+                    <li><a href="#">고객관리</a></li>
+                    <li><a href="#">설정</a></li>
+                </ul>
+            </div>
+            <div id="main">
+                <div id="item1" class="item">
+                    <!-- 이미지 -->
+                    <img src="../resources/img/주파수.jpg" width="100%" height="100%" />
+                    <!-- 내용 -->홈
+                    <!-- <button>홈</button> -->
+                </div>
+                <div id="item2" class="item">
+                    <!-- !-- 이미지 -->
+                    <img src="../resources/img/상품목록.jpg" width="100%" height="100%" />
+                    <!-- 내용 -->상품목록 바로가기
+                    <span></span>
+                    <!-- <button>상품목록 바로가기</button> -->
+                </div>
+
+                <div id="item3" class="item">
+                    <!-- 이미지 -->
+                    <img src="../resources/img/게시판.png" width="100%" height="100%" />
+                    <!-- 내용 -->게시판 바로가기
+                    <span></span>
+                    <!-- <button>게시판 바로가기</button>/ -->
+                </div>
+                <div id="item3" class="item">
+                    <!-- 이미지 -->
+                    <img src="../resources/img/리뷰.png" width="100%" height="100%" />
+                    <!-- 내용 -->리뷰 모음 바로가기
+                    <span></span>
+                    <!-- <button>리뷰 모음 바로가기</button> -->
+                </div>
+                <div id="item3" class="item">
+                    <!-- 이미지 -->
+                    <img src="../resources/img/고객-관리.jpg" width="100%" height="100%" />
+                    <!-- 내용 --> 고객관리 바로가기
+                    <span></span>
+                    <!-- <button>고객관리 바로가기</button> -->
+                </div>
+                <div id="item3" class="item">
+                    <!-- 이미지 -->
+                    <img src="../resources/img/설정4.jpg" width="100%" height="100%" />
+                    <!-- 내용 -->설정 바로가기
+                    <span></span>
+                    <!-- <button>설정 바로가기</button> -->
+                </div>
+                <div id="footer"></div>
+
+            </div>
+
+        </div>
+</body>
+
+</html>
+</body>

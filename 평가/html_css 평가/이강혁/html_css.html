@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html_css평가</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html,
+    body,
+    #wrapper {
+      width: 100%;
+      height: 100%;
+    }
+    #wrapper {
+      display: grid;
+      grid-template-rows: 1fr 5fr 1fr;
+      gap: 1%;
+    }
+    #top {
+      background-color: #fed65b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #mide {
+      /* background-color: aqua; */
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      gap: 1%;
+    }
+    #main1 {
+      background-color: #faeaea;
+      border-radius: 60px 60px 0px 0px;
+      padding: 10%;
+    }
+    ul {
+      background-color: #e6b2b2;
+      padding: 0;
+    }
+    ul li {
+      list-style-type: none;
+      font-family: 600;
+      padding: 5% 8%;
+      border-bottom: 1px solid #d1a3a3;
+      border-left: 1px solid #d1a3a3;
+      border-right: 1px solid #d1a3a3;
+      font-size: 15px;
+    }
+    li a {
+      text-decoration: none;
+      color: white;
+    }
+    #main2 {
+      background-color: #fafafa;
+      border-radius: 60px 60px 0px 0px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1%;
+      padding: 3%;
+    }
+    .img {
+      border: 1px solid #f0f0f0;
+    }
+    .q1 {
+      width: 100%;
+      height: 250px;
+      padding: 15px;
+    }
+    .text {
+      text-decoration: none;
+      font-size: 20px;
+    }
+    #a1 {
+      background-color: #fafafa;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 2%;
+    }
+    #a2 {
+      background-color: #fafafa;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 2%;
+    }
+    #a3 {
+      background-color: #fefefe;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 2%;
+    }
+
+    #footer {
+      background-color: #c9c9ee;
+    }
+    div:not(div#mide div) {
+      border-radius: 60px;
+    }
+  </style>
+  <body>
+    <div id="wrapper">
+      <div id="top">
+        <h1>관리자 페이지</h1>
+      </div>
+      <div id="mide">
+        <div id="main1">
+          <ul>
+            <li><a href="">홈</a></li>
+            <li><a href="">상품</a></li>
+            <li><a href="">게시판</a></li>
+            <li><a href="">리뷰</a></li>
+            <li><a href="">고객관리</a></li>
+            <li><a href="">설정</a></li>
+          </ul>
+        </div>
+        <div id="main2">
+          <div id="a1">
+            <div id="b1" class="img">
+              <a href="">
+                <img class="q1" src="../resources/img/ggggggg.jpg" /></a
+              ><br />
+              <a class="text" href="">홈</a>
+            </div>
+            <div id="b2" class="img">
+              <a href="">
+                <img class="q1" src="../resources/img/rrrrrrrrrrrrr.jpg" /></a
+              ><br />
+              <a class="text" href="">리뷰 모음 바로가기</a>
+            </div>
+          </div>
+          <div id="a2">
+            <div id="c1" class="img">
+              <a href=""> <img class="q1" src="../resources/img/qwert.jpg" /></a
+              ><br />
+              <a class="text" href="">상품목록 바로가기</a>
+            </div>
+            <div id="c2" class="img">
+              <a href=""> <img class="q1" src="../resources/img/bbbbb.jpg" /></a
+              ><br />
+              <a class="text" href="">고객관리 바로가기</a>
+            </div>
+          </div>
+          <div id="a3">
+            <div id="d1" class="img">
+              <a href=""> <img class="q1" src="../resources/img/scscs.jpg" /></a
+              ><br />
+              <a class="text" href="">게시판 바로가기</a>
+            </div>
+            <div id="d2" class="img">
+              <a href=""> <img class="q1" src="../resources/img/zxcv.jpg" /></a
+              ><br />
+              <a class="text" href="">설정 바로가기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>
