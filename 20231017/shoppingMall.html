@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>쇼핑몰</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
   </head>
   <style>
     * {
@@ -20,7 +24,10 @@
     }
     #wrapper {
       display: grid;
-      grid-template-rows: 1fr 1fr 6fr 1fr;
+      grid-template-rows: repeat(
+        1,
+        1fr minmax(65px, auto) 6fr minmax(65px, auto)
+      );
       gap: 1%;
     }
     #header1 {
@@ -28,16 +35,37 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
     }
-    #header2 {
-      background-color: #d1b3e0;
-      /* display: flex; */
-      border-radius: 60px;
-      display: flex;
-      list-style-type: none;
-      justify-content: space-evenly;
-      align-items: center;
-      margin: 0;
+    #header1 > i {
+      position: absolute;
+      top: 50px;
+      right: 20px;
+    }
+    @media screen and (min-width: 768px) {
+      #header2 {
+        background-color: #d1b3e0;
+        /* display: flex; */
+        border-radius: 60px;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0;
+      }
+
+      #header1 > i {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      #header2 {
+        display: none;
+      }
+
+      #header1 > i {
+        display: block;
+      }
     }
     ul#header2 li {
       letter-spacing: 0.3em;
@@ -76,7 +104,9 @@
     #main {
       background-color: #fafafa;
       display: grid;
+      /* grid-template-columns: repeat(3, mixmax(240px, 240px)); */
       grid-template-columns: 1fr 1fr 1fr;
+      /* grid-template-rows: 1fr; */
       gap: 1%;
       padding: 3%;
       border-radius: 60px 60px 0px 0px;
@@ -120,10 +150,15 @@
   <body>
     <div id="wrapper">
       <div id="header1">
+        <!-- <h1>
+          <img src="../resources/img/apple.jpg" style="max-width: 120px" />
+          <span>Web Shopping</span>
+        </h1> -->
         <div>
           <img src="../resources/img/apple.jpg" />
           <span>Web Shopping</span>
         </div>
+        <i class="fas fa-bars fa-lg"></i>
       </div>
       <ul id="header2">
         <li><a href="#">HOME</a></li>
@@ -149,13 +184,28 @@
         <div id="main">
           <div id="item1" class="item">
             <!-- 이미지 -->
-            <img src="../resources/img/coffee.jpg" width="100%" height="100%" />
+            <div
+              style="
+                background-image: url('../resources/img/apple.jpg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+              "
+            >
+              <!-- <img src="../resources/img/apple.jpg" style="object-fit: cover" /> -->
+            </div>
             <!-- 내용 -->
             <span>한성컴퓨터</span>
             <!-- 버튼 -->
             <button>쇼핑카트에 추가하기</button>
           </div>
-          <div id="item2" class="item"></div>
+          <div id="item2" class="item">
+            <!-- <div style="width: 100%; height: 100%">
+              <img src="../resources/img/apple.jpg" />
+            </div>
+            <span>한성컴퓨터</span>
+            <button>쇼핑카트에 추가하기</button> -->
+          </div>
           <div id="item3" class="item"></div>
         </div>
         <div id="aside2" class="aside">
